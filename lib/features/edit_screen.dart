@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
-class EditScreen extends StatelessWidget {
-  const EditScreen({super.key});
+import 'package:notesapp/core/models/note_model.dart';
+import 'package:notesapp/features/widgets/edit_note_view_body.dart';
+
+class EditNoteView extends StatelessWidget {
+  const EditNoteView({super.key, required this.note});
+  final NoteModel note;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: EditNoteViewBody(
+        note: note,
+      ),
     );
   }
 }
